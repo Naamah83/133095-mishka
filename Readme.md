@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Екатерина Пономаренко](https://up.htmlacademy.ru/adaptive/11/user/133095).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Русаков](https://up.htmlacademy.ru/adaptive/11/user/6302). 
 
 ---
 
