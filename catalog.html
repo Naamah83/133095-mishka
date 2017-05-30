@@ -10,7 +10,7 @@
         <a href="index.html"><img src="img/logo.svg" width="86" height="35" alt="Мишка"></a>
       </div>
       <nav class="main-nav main‐nav‐‐open">
-        <span class="main‐nav__toggler"><span></span></span>
+        <button class="main‐nav__toggler" type="button"></button>
         <div class="main‐nav__wrapper">
           <ul class="main‐nav__list">
             <li class="main‐nav__item main‐nav__item‐‐active"><a>Каталог товаров</a></li>
@@ -21,11 +21,9 @@
         </div>
       </nav>
     </header>
-    <section class="menu">
-      <div class="menu__inner">
-        <h1 class="page‐header__title">Каталог товаров</h1>
-      </div>
-    </section>
+    <div class="menu">
+      <h1 class="menu__title">Каталог товаров</h1>
+    </div>
     <article class="product">
       <div class="product__info">
         <a class="product__photo" href="#"><img src="img/photo1.jpg" width="260" height="195" alt="Зайчик"></a>
@@ -49,24 +47,21 @@
         <a class="product__basket" href="" title="в корзину">Корзина</a>
       </div>
     </article>
-    <div class="video‐bg">
+    <div class="video‐bg video‐bg--recorder">
       <h3 class="video‐bg__title">Процесс производства</h3>
-      <img class="video‐bg__icon" src="img/icone7.svg" width="32" height="22" alt="камера">
       <video class="video‐bg__video" controls="controls" width="260" height="150">Видео производства</video>
       <div class="video‐bg__descr">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</div>
-      <a class="video‐bg__order btn" href="#">СДЕЛАТЬ ЗАКАЗ</a>
+      <a class="video‐bg__order btn" href="#">Сделать заказ</a>
     </div>
     <footer class="page‐footer">
       <div class="page‐footer__wrapper">
-        <p class="page‐footer__social">
-          <span class="social‐links">
-            <a class="social‐link social‐link‐‐vk" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
-            <a class="social‐link social‐link‐‐fb" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
-            <a class="social‐link social‐link‐‐tw" href="https://www.twitter.com/htmlacademy">Мы в Твиттере</a>
-          </span>
-        </p>
+        <div class="social‐links">
+          <a class="social‐link social‐link‐‐vk" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+          <a class="social‐link social‐link‐‐fb" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+          <a class="social‐link social‐link‐‐tw" href="https://www.twitter.com/htmlacademy">Мы в Твиттере</a>
+        </div>
         <p class="page‐footer__copyright">Разработано</p>
-        <a class="page‐footer__copyright‐link btn btn‐‐invert" href="https://htmlacademy.ru/intensive/adaptive">HTML</a>
+        <a class="page‐footer__copyright‐link btn btn‐‐invert" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </div>
     </footer>
   </body>
