@@ -10,7 +10,7 @@
         <a href="index.html"><img src="img/logo.svg" width="86" height="35" alt="Мишка"></a>
       </div>
       <nav class="main-nav main‐nav‐‐open">
-        <button class="main‐nav__toggler" type="button"></button>
+        <button class="main‐nav__toggler" type="button">Открыть меню</button>
         <div class="main‐nav__wrapper">
           <ul class="main‐nav__list">
             <li class="main‐nav__item"><a href="catalog.html">Каталог товаров</a></li>
@@ -21,21 +21,20 @@
         </div>
       </nav>
     </header>
-    <div class="menu">
-      <h1 class="menu__title">Вязание на заказ</h1>
-    </div>
+    <h1 class="inner__title">Вязание на заказ</h1>
     <section class="form-order">
+      <h2 class="form-order__title--hidden">Форма заказа</h2>
       <div class="form-order__descr">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</div>
       <form class="form-order__info" action="https://echo.htmlacademy.ru" method="post">
         <div class="form-order__info-inner">
           <fieldset>
             <legend>Тип</legend>
             <label class="field‐radio form-order__info‐field">
-                <input class="field‐text__input" type="radio" name="type" value="accessories" checked>Аксессуары для интерьера
+              <input class="field‐text__input" type="radio" name="type" value="accessories" checked>Аксессуары для интерьера
             </label>
             <label class="field‐radio form-order__info‐field">
               <input class="field‐text__input" type="radio" name="type" value="toy">Детская игрушка
-          </label>
+            </label>
           </fieldset>
         </div>
         <div class="form-order__info-inner">
@@ -65,11 +64,11 @@
           <fieldset>
             <legend>ФИО</legend>
             <label class="field‐text form-order__info‐field" for="name">Имя:</label>
-              <input class="field‐text__input" type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
+            <input class="field‐text__input" type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
             <label class="field‐text form-order__info‐field" for="surname">Фамилия:</label>
-              <input class="field‐text__input" type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
+            <input class="field‐text__input" type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
             <label class="field‐text form-order__info‐field" for="patronymic">Отчество:</label>
-              <input class="field‐text__input" type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
+            <input class="field‐text__input" type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
           </fieldset>
         </div>
         <div class="form-order__info-inner">
@@ -87,19 +86,19 @@
         </div>
         <small class="order-form__legend order-form__legend‐‐bottom"><sup>*</sup>Поля обязательны для заполнения</small>
         <div class="field‐text form-order__info‐field">
-            <button class="field‐action__btn btn">Отправить заказ</button>
-          </div>
+          <button class="field‐action__btn btn" type="submit">Отправить заказ</button>
+        </div>
       </form>
     </section>
     <footer class="page‐footer">
-      <div class="page‐footer__wrapper">
+      <div class="page‐footer__inner">
         <div class="social‐links">
           <a class="social‐link social‐link‐‐vk" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
           <a class="social‐link social‐link‐‐fb" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
           <a class="social‐link social‐link‐‐tw" href="https://www.twitter.com/htmlacademy">Мы в Твиттере</a>
         </div>
         <p class="page‐footer__copyright">Разработано</p>
-        <a class="page‐footer__copyright‐link btn btn‐‐invert" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="page‐footer__copyright‐link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </div>
     </footer>
   </body>

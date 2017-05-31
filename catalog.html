@@ -10,7 +10,7 @@
         <a href="index.html"><img src="img/logo.svg" width="86" height="35" alt="Мишка"></a>
       </div>
       <nav class="main-nav main‐nav‐‐open">
-        <button class="main‐nav__toggler" type="button"></button>
+        <button class="main‐nav__toggler" type="button">Открыть меню</button>
         <div class="main‐nav__wrapper">
           <ul class="main‐nav__list">
             <li class="main‐nav__item main‐nav__item‐‐active"><a>Каталог товаров</a></li>
@@ -21,32 +21,45 @@
         </div>
       </nav>
     </header>
-    <div class="menu">
-      <h1 class="menu__title">Каталог товаров</h1>
-    </div>
-    <article class="product">
-      <div class="product__info">
-        <a class="product__photo" href="#"><img src="img/photo1.jpg" width="260" height="195" alt="Зайчик"></a>
-        <a class="product__name" href="#"><h3>Зайчик-попрыгайчик</h3></a>
-        <div class="product__descr">Рост 30 см, вес 200 г</div>
-        <div class="product__price">1200 pуб.</div>
-        <a class="product__basket" href="" title="в корзину">Корзина</a>
-      </div>
-      <div class="product__info">
-        <a class="product__photo" href="#"><img src="img/photo2.jpg" width="260" height="195" alt="Корзинка"></a>
-        <a class="product__name" href="#"><h3>Корзинка для белья</h3></a>
-        <div class="product__descr">Диаметр 15 см, высота 10 см</div>
-        <div class="product__price">690 pуб.</div>
-        <a class="product__basket" href="" title="в корзину">Корзина</a>
-      </div>
-      <div class="product__info">
-        <a class="product__photo" href="#"><img src="img/photo3.jpg" width="260" height="195" alt="Большая корзинка"></a>
-        <a class="product__name" href="#"><h3>Большая корзинка для игрушек</h3></a>
-        <div class="product__descr">Диаметр 30 см, высота 30 см</div>
-        <div class="product__price">1500 pуб.</div>
-        <a class="product__basket" href="" title="в корзину">Корзина</a>
-      </div>
-    </article>
+    <h1 class="inner__title">Каталог товаров</h1>
+    <section class="catalog">
+      <h2 class="catalog__title--hidden">Список товаров</h2>
+      <ul class="catalog__list">
+        <li class="catalog-item">
+          <article class="product">
+            <a class="product__photo" href="#"><img src="img/photo1.jpg" width="260" height="195" alt="Зайчик"></a>
+            <h3 class="product__title">
+              <a href="#">Зайчик-попрыгайчик</a>
+            </h3>
+            <div class="product__descr">Рост 30 см, вес 200 г</div>
+            <div class="product__price">1200 pуб.</div>
+            <a class="product__basket" href="#" title="в корзину">Корзина</a>
+          </article>
+        </li>
+        <li class="catalog-item">
+          <article class="product">
+            <a class="product__photo" href="#"><img src="img/photo2.jpg" width="260" height="195" alt="Корзинка"></a>
+            <h3 class="product__title">
+              <a href="#">Корзинка для белья</a>
+            </h3>
+            <div class="product__descr">Диаметр 15 см, высота 10 см</div>
+            <div class="product__price">690 pуб.</div>
+            <a class="product__basket" href="#" title="в корзину">Корзина</a>
+          </article>
+        </li>
+        <li class="catalog-item">
+          <article class="product">
+            <a class="product__photo" href="#"><img src="img/photo3.jpg" width="260" height="195" alt="Большая корзинка"></a>
+            <h3 class="product__title">
+              <a href="#">Большая корзинка для игрушек</a>
+            </h3>
+            <div class="product__descr">Диаметр 30 см, высота 30 см</div>
+            <div class="product__price">1500 pуб.</div>
+            <a class="product__basket" href="#" title="в корзину">Корзина</a>
+          </article>
+        </li>
+      </ul>
+    </section>
     <div class="video‐bg video‐bg--recorder">
       <h3 class="video‐bg__title">Процесс производства</h3>
       <video class="video‐bg__video" controls="controls" width="260" height="150">Видео производства</video>
@@ -54,14 +67,14 @@
       <a class="video‐bg__order btn" href="#">Сделать заказ</a>
     </div>
     <footer class="page‐footer">
-      <div class="page‐footer__wrapper">
+      <div class="page‐footer__inner">
         <div class="social‐links">
           <a class="social‐link social‐link‐‐vk" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
           <a class="social‐link social‐link‐‐fb" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
           <a class="social‐link social‐link‐‐tw" href="https://www.twitter.com/htmlacademy">Мы в Твиттере</a>
         </div>
         <p class="page‐footer__copyright">Разработано</p>
-        <a class="page‐footer__copyright‐link btn btn‐‐invert" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="page‐footer__copyright‐link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </div>
     </footer>
   </body>
