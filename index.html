@@ -5,8 +5,135 @@
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
-
+    <header class="page-header">
+      <div class="page‐header__logo">
+        <img src="img/logo.svg" width="86" height="35" alt="Мишка">
+      </div>
+      <nav class="main-nav main‐nav‐‐open">
+        <button class="main‐nav__toggler" type="button">Открыть меню</button>
+        <div class="main‐nav__wrapper">
+          <ul class="main‐nav__list">
+            <li class="main‐nav__item"><a href="catalog.html">Каталог товаров</a></li>
+            <li class="main‐nav__item"><a href="form.html">Вязание на заказ</a></li>
+            <li class="main‐nav__item"><a href="#">Поиск по сайту</a></li>
+            <li class="main‐nav__item"><a href="#">Корзина: пока пуста</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <h1 class="page-title">Милые штуки ручной работы для дома</h1>
+    <div class="menu">
+      <a class="menu__product menu__product--interior" href="#">Предметы интерьера</a>
+      <a class="menu__product menu__product--toy" href="#">Детские игрушки</a>
+    </div>
+    <article class="featured">
+      <div class="featured__inner">
+        <h2 class="featured__title">Вязаные корзинки</h2>
+        <h3 class="featured__top-week">Товар недели</h3>
+        <div class="featured__descr">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</div>
+        <table class="featured__table">
+          <tr>
+            <td>Цвет</td>
+            <td>«Тиффани»/серый</td>
+          </tr>
+          <tr>
+            <td>Диаметр</td>
+            <td>25 см</td>
+          </tr>
+          <tr>
+            <td>Высота</td>
+            <td>15 см</td>
+          </tr>
+        </table>
+        <div class="featured__photo">
+          <img src="img/photo.jpg" width="260" height="315" alt="Три вязаные корзинки разных размеров">
+        </div>
+        <div class="featured__price">Цена 990 руб.</div>
+        <a class="featured__form btn" href="#">Заказать</a>
+      </div>
+    </article>
+    <section class="advantages">
+      <h2 class="advantages__title">Коротко о нас:</h2>
+      <ul class="advantages__list">
+        <li class="advantages__list-item advantages__list-item--flower">
+          Экологически чистые материалы
+        </li>
+        <li class="advantages__list-item advantages__list-item--banknote">
+          Скандинавский стиль по российской цене
+        </li>
+        <li class="advantages__list-item advantages__list-item--heart">
+          Увеличивает лайки на фотографиях
+        </li>
+        <li class="advantages__list-item advantages__list-item--ball">
+          Связано в ручную с любовью и умилением
+        </li>
+        <li class="advantages__list-item advantages__list-item--rocket">
+          Поддержка отечественного производителя
+        </li>
+        <li class="advantages__list-item advantages__list-item--gift">
+          Поставляется в подарочной упаковке
+        </li>
+      </ul>
+    </section>
+    <section class="reviews">
+      <h2 class="reviews__title">Отзывы</h2>
+      <div class="reviews__slider‐wrapper slider">
+        <ul class="slider__slides">
+          <li class="slider__slide">
+            <blockquote class="slider__item">
+              <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фоторгафии стали более стильными, а также набирают больше лайков!</p>
+              <cite class="slider__author‐review">Анастасия Красильникова</cite>
+              <p>@misssssiskras</p>
+            </blockquote>
+          </li>
+          <li class="slider__slide slider__slide--hidden">
+            <blockquote class="slider__item">
+              <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фоторгафии стали более стильными, а также набирают больше лайков!</p>
+              <cite class="slider__author‐review">Анастасия Красильникова</cite>
+              <p>@misssssiskras</p>
+            </blockquote>
+          </li>
+          <li class="slider__slide slider__slide--hidden">
+            <blockquote class="slider__item">
+              <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фоторгафии стали более стильными, а также набирают больше лайков!</p>
+              <cite class="slider__author‐review">Анастасия Красильникова</cite>
+              <p>@misssssiskras</p>
+            </blockquote>
+          </li>
+        </ul>
+        <button class="reviews__prev" type="button">Предыдущий отзыв</button>
+        <button class="reviews__next" type="button">Следующий отзыв</button>
+      </div>
+      <a class="reviews__write btn" href="#">Написать</a>
+    </section>
+    <section class="contacts">
+      <h2 class="contacts__title">Контакты</h2>
+      <table class="contacts-table">
+        <tr>
+          <td>e-mail:</td>
+          <td><a href="email:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
+        </tr>
+        <tr>
+          <td>адрес:</td>
+          <td>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
+        </tr>
+      </table>
+      <div class="map">
+        Здесь будет карта
+        <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acb452faafb9d60e546e23c5d3d845d28bafbe95bfbdf3fbe5df0acc5968ad034&amp;width=320&amp;height=460&amp;lang=ru_RU&amp;scroll=true"></script> -->
+      </div>
+      <a class="contacts__write btn" href="#">Напишите нам</a>
+    </section>
+    <footer class="page‐footer">
+      <div class="page‐footer__inner">
+        <div class="social‐links">
+          <a class="social‐link social‐link‐‐vk" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+          <a class="social‐link social‐link‐‐fb" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+          <a class="social‐link social‐link‐‐tw" href="https://www.twitter.com/htmlacademy">Мы в Твиттере</a>
+        </div>
+        <p class="page‐footer__copyright">Разработано</p>
+        <a class="page‐footer__copyright‐link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </div>
+    </footer>
   </body>
 </html>
