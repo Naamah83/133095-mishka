@@ -28,65 +28,64 @@
       <form class="form-order__info" action="https://echo.htmlacademy.ru" method="post">
         <div class="form-order__info-inner">
           <fieldset>
-            <legend>Тип</legend>
+            <legend class="form-order__legend">Тип</legend>
             <label class="field‐radio form-order__info‐field">
-              <input class="field‐text__input" type="radio" name="type" value="accessories" checked>Аксессуары для интерьера
+              <input class="field‐radio__input" type="radio" name="type" value="accessories" checked>Аксессуары для интерьера
             </label>
             <label class="field‐radio form-order__info‐field">
-              <input class="field‐text__input" type="radio" name="type" value="toy">Детская игрушка
+              <input class="field‐radio__input" type="radio" name="type" value="toy">Детская игрушка
             </label>
           </fieldset>
         </div>
         <div class="form-order__info-inner">
           <fieldset>
-            <legend>Цвет</legend>
+            <legend class="form-order__legend">Цвет</legend>
             <label class="field‐checkbox form-order__info‐field">
-              <input class="field‐text__input" type="checkbox" name="color" value="white" checked>Белый
+              <input class="field‐checkbox__input" type="checkbox" name="color" value="white" checked>Белый
             </label>
             <label class="field‐checkbox form-order__info‐field">
-              <input class="field‐text__input" type="checkbox" name="color" value="grey" checked>Серый
+              <input class="field‐checkbox__input" type="checkbox" name="color" value="grey" checked>Серый
             </label>
             <label class="field‐checkbox form-order__info‐field">
-              <input class="field‐text__input" type="checkbox" name="color" value="tiffany">«Тиффани»
+              <input class="field‐checkbox__input" type="checkbox" name="color" value="tiffany">«Тиффани»
             </label>
             <label class="field‐checkbox form-order__info‐field">
-              <input class="field‐text__input" type="checkbox" name="color" value="black">Черный
+              <input class="field‐checkbox__input" type="checkbox" name="color" value="black">Черный
             </label>
             <label class="field‐checkbox form-order__info‐field">
-              <input class="field‐text__input" type="checkbox" name="color" value="pink">Розовый
+              <input class="field‐checkbox__input" type="checkbox" name="color" value="pink">Розовый
             </label>
             <label class="field‐checkbox form-order__info‐field">
-              <input class="field‐text__input" type="checkbox" name="color" value="orangе">Оранжевый
+              <input class="field‐checkbox__input" type="checkbox" name="color" value="orangе">Оранжевый
             </label>
           </fieldset>
         </div>
         <div class="form-order__info-inner">
           <fieldset>
-            <legend>ФИО</legend>
-            <label class="field‐text form-order__info‐field" for="name">Имя:</label>
-            <input class="field‐text__input" type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
-            <label class="field‐text form-order__info‐field" for="surname">Фамилия:</label>
-            <input class="field‐text__input" type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
-            <label class="field‐text form-order__info‐field" for="patronymic">Отчество:</label>
-            <input class="field‐text__input" type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
+            <legend class="form-order__legend">ФИО</legend>
+            <label class="form-order__info-title" for="name">Имя:</label>
+            <input class="form-order__input" type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
+            <label class="form-order__info-title" for="surname">Фамилия:</label>
+            <input class="form-order__input" type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
+            <label class="form-order__info-title" for="patronymic">Отчество:</label>
+            <input class="form-order__input" type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
           </fieldset>
         </div>
         <div class="form-order__info-inner">
-          <div class="form-order__contacts form-order__contacts--phone">Тел</div>
-            <label class="field‐text form-order__info‐field" for="phone"></label>
-            <input class="field‐text__input" type="tel" name="tel" id="phone" placeholder="+7 XXX XX XX*" required>
-          <div class="form-order__contacts form-order__contacts--email">E-mail</div>
-            <label class="field‐text form-order__info‐field" for="email"></label>
-            <input class="field‐text__input" type="email" name="email" id="email" placeholder="Ваш Email*" required>
+          <label class="form-order__legend form-order__legend--phone" for="phone">Тел</label>
+          <input class="form-order__input" type="tel" name="tel" id="phone" placeholder="+7 XXX XX XX*" required>
         </div>
         <div class="form-order__info-inner">
-          <div class="form-order__contacts">Доп</div>
-            <label class="field‐text form-order__info‐field form-order__info‐field--wide"></label>
-            <textarea class="field‐text__input" placeholder="Опишите все ваши пожелания к заказу" name="messag"></textarea>
+          <label class="form-order__legend form-order__legend--email" for="email">E-mail</label>
+          <input class="form-order__input" type="email" name="email" id="email" placeholder="Ваш Email*" required>
         </div>
-        <small class="order-form__legend order-form__legend‐‐bottom"><sup>*</sup>Поля обязательны для заполнения</small>
-        <div class="field‐text form-order__info‐field">
-          <button class="field‐action__btn btn" type="submit">Отправить заказ</button>
+        <div class="form-order__info-inner">
+          <label class="form-order__legend">Доп</label>
+          <textarea class="form-order__textarea form-order__textarea--wide" placeholder="Опишите все ваши пожелания к заказу" name="messag"></textarea>
+        </div>
+        <small class="form-order__notice form-order__notice‐‐bottom"><sup>*</sup>Поля обязательны для заполнения</small>
+        <div class="form-order__submit">
+          <button class="form-order__btn btn" type="submit">Отправить заказ</button>
         </div>
       </form>
     </section>
