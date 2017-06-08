@@ -1,5 +1,10 @@
 body {
   font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 400;
+  background-color: @bg-white;
+  .container();
 }
 
 a {
@@ -21,4 +26,27 @@ h1 {
 label {
   margin: 0;
   padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: "PT Sans Narrow";
+  font-style: normal;
+
+  src: url("fonts/PTSansNarrow.woff2") format("woff2"),
+  url("fonts/PTSansNarrow.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "PT Sans Narrow";
+  font-style: normal;
+
+  src: url("fonts/PTSansNarrowBold.woff2") format("woff2"),
+  url("fonts/PTSansNarrowBold.woff") format("woff");
 }

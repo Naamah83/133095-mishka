@@ -10,14 +10,16 @@
       <div class="page-header__logo">
         <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
       </div>
-      <nav class="main-nav main-nav--open">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggler" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
             <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
-            <li class="main-nav__item"><a href="#">Поиск по сайту</a></li>
-            <li class="main-nav__item"><a href="#">Корзина: пока пуста</a></li>
+          </ul>
+          <ul class="main-nav__user-list">
+            <li class="main-nav__item-search"><a href="#">Поиск по сайту</a></li>
+            <li class="main-nav__item-basket"><a href="#">Корзина: пока пуста</a></li>
           </ul>
         </div>
       </nav>
@@ -34,16 +36,16 @@
         <div class="featured__descr">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</div>
         <table class="featured__table">
           <tr>
-            <td>Цвет</td>
-            <td>«Тиффани»/серый</td>
+            <td class="featured__fiend">Цвет</td>
+            <td class="featured__value">«Тиффани»/серый</td>
           </tr>
           <tr>
-            <td>Диаметр</td>
-            <td>25 см</td>
+            <td class="featured__fiend">Диаметр</td>
+            <td class="featured__value">25 см</td>
           </tr>
           <tr>
-            <td>Высота</td>
-            <td>15 см</td>
+            <td class="featured__fiend">Высота</td>
+            <td class="featured__value">15 см</td>
           </tr>
         </table>
         <div class="featured__photo">
@@ -109,14 +111,14 @@
     </section>
     <section class="contacts">
       <h2 class="contacts__title">Контакты</h2>
-      <table class="contacts-table">
+      <table class="contacts__table">
         <tr>
-          <td>e-mail:</td>
-          <td><a href="email:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
+          <td class="contacts__fiend">e-mail:</td>
+          <td class="featured__value"><a href="email:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
         </tr>
         <tr>
-          <td>адрес:</td>
-          <td>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
+          <td class="contacts__fiend">адрес:</td>
+          <td class="featured__value">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</td>
         </tr>
       </table>
       <div class="map">
@@ -138,5 +140,21 @@
         </div>
       </div>
     </footer>
+    <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggler = document.querySelector('.main-nav__toggler');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggler.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
   </body>
 </html>

@@ -3,7 +3,6 @@
   font-size: 19px;
   line-height: 24px;
   font-weight: 700;
-  margin: 0 auto;
   margin-top: -73px;
 }
 
@@ -19,4 +18,31 @@
 
 .menu__product--toy {
   background-color: #56c3b2;
+}
+
+@media @tablet-widths {
+
+  .menu {
+    width: 668px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: -120px;
+    margin-left: 50px;
+  }
+}
+
+@media @desktop-widths {
+
+  .menu {
+    width: 1050px;
+    height: 120px;
+    margin-left: 100px;
+  }
+
+  .menu__product {
+    width: 525px;
+    padding-right: 340px;
+  }
 }

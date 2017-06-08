@@ -41,6 +41,163 @@
   margin-top: 20px;
   margin-bottom: 37px;
 }
+
 .featured__form {
   padding: 15px 78px;
+}
+
+@media @tablet-widths {
+
+  .featured {
+    position: relative;
+    width: 708px;
+    height: 464px;
+    padding: 30px 30px;
+    margin: 0;
+  }
+
+  .featured__inner {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .featured__title {
+    width: 520px;
+    align-self: flex-start;
+    margin: 0;
+    padding: 0;
+    order: 1;
+  }
+
+  .featured__top-week {
+    width: 85px;
+    margin: 0;
+    padding: 0;
+    align-self: flex-end;
+    text-align: center;
+    order: 2;
+  }
+
+  .featured__descr {
+    width: 243px;
+    align-self: flex-start;
+    order: 3;
+    margin-right: 65px;
+    margin-bottom: 40px;
+  }
+
+  .featured__photo {
+    position: absolute;
+    width: 334px;
+    height: 405px;
+    top: 110px;
+    left: 440px;
+    order: 4;
+  }
+
+  .featured__table {
+    width: 334px;
+    align-self: flex-start;
+    order: 6;
+    margin-bottom: 30px;
+  }
+
+  .featured__price {
+    width: 285px;
+    padding-right: 50px;
+    margin-right: 40px;
+    margin-bottom: 50px;
+    align-self: flex-start;
+    order: 6;
+  }
+
+  .featured__form {
+    width: 288px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+    align-self: flex-start;
+    order: 7;
+  }
+}
+
+@media @desktop-widths {
+
+  .featured {
+    width: 1050px;
+    height: 632px;
+    margin-left: 100px;
+  }
+
+  .featured__inner {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .featured__title {
+    width: 525px;
+    margit-top: auto;
+    margin-right: 200px;
+    margin-bottom: 30px;
+    align-self: center;
+    order: 2;
+  }
+
+  .featured__top-week {
+    width: 85px;
+    margin: 0;
+    padding: 0;
+    align-self: flex-start;
+    text-align: center;
+    order: 1;
+  }
+
+  .featured__descr {
+    align-self: center;
+    order: 3;
+    margin-right: 485px;
+    margin-bottom: 40px;
+  }
+
+  .featured__photo {
+    position: absolute;
+    width: 334px;
+    height: 405px;
+    top: 110px;
+    left: 710px;
+    order: 2;
+  }
+
+  .featured__table {
+    width: 334px;
+    align-self: center;
+    order: 6;
+    margin-right: 400px;
+    margin-bottom: 30px;
+  }
+
+  .featured__price {
+    width: 285px;
+    padding-right: 50px;
+    margin-right: 400px;
+    margin-bottom: 50px;
+    align-self: center;
+    order: 6;
+  }
+
+  .featured__form {
+    line-height: 30px;
+    margin: 0;
+    padding: 0 30px;
+    margin-right: 400px;
+    padding-top: 20px;
+    align-self: center;
+    order: 7;
+  }
+
 }

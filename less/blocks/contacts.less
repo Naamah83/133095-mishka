@@ -11,3 +11,62 @@
 .contacts__write {
   padding: 15px 47px;
 }
+
+@media @tablet-widths {
+
+  .contacts {
+    display: flex;
+    flex-wrap: wrap;
+    width: 786px;
+    padding: 0 60px 0 60px;
+  }
+
+  .contacts__title {
+    flex-basis: 100%;
+    font-size: 43px;
+    line-height: 50px;
+    font-weight: 700;
+    margin-bottom: 45px;
+  }
+
+  .contacts__table {
+    display: block;
+    padding-bottom: 55px;
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: 400;
+    }
+
+  .contacts__table tbody {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contacts__table tr {
+    display: block;
+    box-sizing: border-box;
+    width: 334px;
+  }
+
+  .contacts__fiend {
+    vertical-align: top;
+    padding-right: 15px;
+  }
+
+  .contacts__write {
+    width: 228px;
+    padding: 0;
+    height: 30px;
+    padding-top: 16px;
+    margin: 0 268px 0 268px;
+  }
+}
+
+@media @desktop-widths {
+
+  .contacts {
+    width: 1050px;
+    padding: 0 60px 0 220px;
+  }
+
+}

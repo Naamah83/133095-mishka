@@ -1,4 +1,33 @@
+.clearfix() {
+  &::after {
+    content: "";
+
+    display: table;
+    clear: both;
+  }
+}
+
 .container() {
   width: 320px;
   margin: 0 auto;
+
+  @media @tablet-widths {
+    width: 668px;
+  }
+
+  @media @desktop-widths {
+    width: 1050px;
+  }
 }
+
+
+.container-fluid () {
+  width: auto;
+
+  @media @tablet-widths {
+    width: 87%;        /* 668px / 768px ~= 87% */
+    max-width: 1050px;
+    margin: 0 auto;
+  }
+}
+
