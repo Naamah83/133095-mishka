@@ -1,9 +1,23 @@
 .map {
   width: 100%;
-  height: 460px;
-  margin: 0;
-  padding: 0;
-  background: url("../img/map-mobile@1x.jpg") no-repeat 100% 100%;
-  margin-bottom: 51px;
+  height: 458px;
+  background: url("../img/map-mobile@1x.jpg") no-repeat;
   background-size: cover;
+  margin-top: -45px;
+  margin-bottom: 130px;
+
+  @media @tablet-widths {
+
+    margin-bottom: 162px;
+  }
+
+  @media @desktop-widths {
+
+    position: absolute;
+    width: 525px;
+    left: 525px;
+    top: 0;
+    margin: 0;
+    height: 100%;
+  }
 }

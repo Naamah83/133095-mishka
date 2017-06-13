@@ -1,29 +1,41 @@
 .page-title {
   display: block;
-  height: 285px;
-  width: 260px;
   font-size: 27px;
   line-height: 30px;
   font-weight: 700;
-  margin: auto;
   background: #f9f9f9 url("../img/hero-mobile@1x.jpg") no-repeat;
   background-position: center 0px;
-  background-size: cover;
-}
+  padding-top: 90px;
+  padding-bottom: 250px;
+  border-top: 1px solid #ededed;
 
-@media @tablet-widths {
+  @media @tablet-widths {
 
-  .page-title {
-    width: 768px;
-    height: 745px;
-    padding: 0;
+    position: relative;
+    font-size: 43px;
+    line-height: 50px;
+    background: #f9f9f9 url("../img/hero-mobile@1x.jpg") no-repeat;
+    background-position: center 0px;
+    padding-top: 90px;
+    padding-bottom: 245px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background: url(../img/zigzag-fill-desktop.png);
+      background-repeat: repeat;
+      width: 100%;
+      height: 24px;
+      bottom: -11px;
+      left: 0;
+      z-index: 1;
+    }
   }
-}
 
-@media @desktop-widths {
+  @media @desktop-widths {
 
-  .page-title {
-    width: 1250px;
+    font-size: 53px;
+    line-height: 57px;
+    border-top: none;
   }
-
 }
