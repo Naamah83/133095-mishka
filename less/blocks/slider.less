@@ -3,6 +3,12 @@
   padding: 0;
   list-style: none;
   text-align: left;
+
+  @media @tablet-widths {
+
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .slider__slide:nth-child(n+2) {
@@ -12,4 +18,32 @@
 .slider__item {
   margin: 0;
   padding: 0;
+
+  @media @tablet-widths {
+
+    & p {
+      margin-bottom: 55px;
+    }
+  }
+
+  @media @desktop-widths {
+
+    & p {
+      padding-right: 105px;
+      margin-bottom: 35px;
+    }
+  }
+}
+
+.slider__author-review {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+  font-style: normal;
+
+  @media @tablet-widths {
+
+    font-size: 18px;
+  }
 }

@@ -1,16 +1,38 @@
 .page-header {
-  min-height: 50px;
-  width: 320px;
-  margin: 0 auto;
-  padding-top: 30px;
 
+  border-top: 1px solid #f1f1f1;
+
+  @media @tablet-widths {
+
+    .container();
+    display: flex;
+    position: relative;
+    border-top: none;
+  }
+
+  @media @desktop-widths {
+
+    width: 1050px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-bottom: 1px solid #f1f1f1;
+  }
 }
 
 .page-header__logo {
-  display: block;
-  position: relative;
-  width: 86px;
-  height: 35px;
-  left: 115px;
-  bottom: 22px;
+  text-align: center;
+  padding-top: 24px;
+  padding-bottom: 12px;
+
+  @media @tablet-widths {
+
+    padding-top: 29px;
+    padding-bottom: 15px;
+  }
+
+  @media @desktop-widths {
+
+    position: relative;
+    left: 485px;
+  }
 }
