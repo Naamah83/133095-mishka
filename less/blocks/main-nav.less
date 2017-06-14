@@ -19,8 +19,8 @@
 
 .main-nav__toggler {
   position: absolute;
-  right: 0;
-  top: -53px;
+  right: 5px;
+  top: -50px;
   display: block;
   width: 25px;
   height: 25px;
@@ -37,10 +37,10 @@
   width: 20px;
   height: 2px;
   top: 3px;
-  left: 2px;
+  left: 9px;
   background-color: #000000;
-  box-shadow: 0 7px 0 0 #000000,
-              0 14px 0 0 #000000;
+  box-shadow: 0 6px 0 0 #000000,
+              0 12px 0 0 #000000;
 }
 
 .main-nav--closed .main-nav__toggler:active::before {
@@ -121,7 +121,7 @@
 
 .main-nav__list {
   font-size: 17px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 24px;
   list-style: none;
   margin: 0;
@@ -132,7 +132,7 @@
     flex-wrap: wrap;
     font-size: 15px;
     line-height: 24px;
-    transform: translateY(110px);
+    transform: translateY(106px);
     z-index: 1;
     margin: 0;
     padding: 0;
@@ -148,12 +148,12 @@
     margin-top: 0;
     align-items: center;
     transform: translateY(0px);
-    padding-top: 33px;
+    padding-top: 30px;
   }
 }
 
 .main-nav__user-list {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 17px;
   line-height: 24px;
   list-style: none;
@@ -186,14 +186,14 @@
     padding: 0;
 
     &:nth-child(1) {
-      padding-right: 30px;
+      padding-right: 36px;
     }
   }
 
   @media @desktop-widths {
 
     &:nth-child(1) {
-      padding-right: 35px;
+      padding-right: 38px;
       position: relative;
 
       &::after {
@@ -202,7 +202,7 @@
         width: 1px;
         height: 88px;
         background-color: #f1f1f1;
-        left: 174px;
+        left: 184px;
         top: -32px;
       }
     }
@@ -238,13 +238,15 @@
   @media @tablet-widths {
 
     border-top: none;
-    padding-left: 100px;
-    padding-top: 35px;
+    padding-left: 82px;
+    padding-top: 30px;
+    padding-right: 30;
   }
 
   @media @desktop-widths {
 
-    padding-top: 20px;
+    padding-top: 19px;
+    padding-left: 82px;
   }
 }
 
@@ -256,8 +258,8 @@
     display: block;
     font-size: 15px;
     line-height: 24px;
-    transform: translateY(50px);
-    padding-right: 30px;
+    transform: translateY(52px);
+    padding-right: 32px;
   }
 }
 
@@ -269,7 +271,7 @@
     display: block;
     font-size: 15px;
     line-height: 24px;
-    transform: translateY(50px);
+    transform: translateY(52px);
     padding-left: 30px;
   }
 }
@@ -282,7 +284,7 @@
     display: block;
     position: absolute;
     right: 0;
-    top: 105px;
+    top: 103px;
     z-index: 1;
   }
 }
