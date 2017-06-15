@@ -99,7 +99,44 @@
         </div>
       </div>
     </footer>
+    <section class="modal">
+      <div class="modal__wrapper">
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="modal__form-title">Выберите размер:</div>
+          <div class="modal__inner">
+            <input id="s" type="radio" name="size" checked>
+            <label class="modal__size" for="s">S</label>
+            <input id="m" type="radio" name="size" checked>
+            <label class="modal__size" for="m">M</label>
+            <input id="l" type="radio" name="size" checked>
+            <label class="modal__size" for="l">L</label>
+          </div>
+          <button class="modal__btn btn" type="submit">Добавить</button>
+        </form>
+      </div>
+    </section>
+    <div class="modal-overlap"></div>
     <script>
+    var link = document.querySelector(".featured__form");
+    var popup = document.querySelector(".modal");
+    var overlap = document.querySelector(".modal-overlap");
+
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      popup.classList.add("modal--show");
+      overlap.classList.add("modal--show");
+    });
+
+    window.addEventListener("keydown", function (event) {
+      if (event.keyCode === 27) {
+        if (popup.classList.contains("modal--show")) {
+          popup.classList.remove("modal--show");
+          overlap.classList.remove("modal-overlap--show");
+        }
+      }
+    });
+
     var navMain = document.querySelector('.main-nav');
     var navToggler = document.querySelector('.main-nav__toggler');
 

@@ -37,6 +37,7 @@
   font-weight: 700;
   padding: 0;
   margin: 0;
+  position: relative;
   margin-bottom: 25px;
 
   @media @tablet-widths {
@@ -46,6 +47,16 @@
     font-weight: 700;
     margin-bottom: 50px;
     margin-left: -5px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -15px;
+      right: 3px;
+      width: 47px;
+      height: 81px;
+      background: url("../img/icon-flag.svg") no-repeat center;
+    }
   }
 
   @media @desktop-widths {
@@ -54,6 +65,11 @@
     font-size: 53px;
     line-height: 57px;
     margin-bottom: 0;
+
+    &::before {
+      top: -7px;
+      left: -106px;
+    }
   }
 }
 
@@ -65,12 +81,22 @@
   font-weight: 400;
   color: #828282;
   border-collapse: collapse;
+  margin-bottom: 29px;
 
     a {
       color: #828282;
       padding: 0;
       margin: 0;
+      border-bottom: 1px solid #62d1ba;
+
+      &:hover {
+      color: #46c1ae;
     }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 
   @media @tablet-widths {
 
@@ -109,33 +135,21 @@
   vertical-align: top;
   padding: 0;
   margin: 0;
-  padding-right: 29px;
-  padding-bottom: 30px;
-
-  @media @tablet-widths {
-
-    padding-right: 23px;
-  }
-
-  @media @desktop-widths {
-
-    padding-right: 25px;
-  }
+  width: 76px;
+  padding-bottom: 31px;
 }
 
 .contacts__value {
   vertical-align: top;
   padding: 0;
   margin: 0;
-  padding-right: 20px;
-  padding-bottom: 30px;
 }
 
 .contacts__write {
   font-size: 18px;
   line-height: 20px;
   padding: 14px 0 14px 0;
-  transform: translateY(503px);
+  transform: translateY(504px);
 
   @media @tablet-widths {
 

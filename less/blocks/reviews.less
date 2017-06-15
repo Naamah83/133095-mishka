@@ -4,7 +4,7 @@
   line-height: 30px;
   font-weight: 400;
   color: #828282;
-  margin-bottom: 87px;
+  margin-bottom: 86px;
 }
 
 .reviews::after {
@@ -27,7 +27,7 @@
     background-position: left 0px;
     font-size: 17px;
     padding-top: 78px;
-    padding-bottom: 50px;
+    margin-bottom: 66px;
   }
 
   .reviews::after {
@@ -46,7 +46,7 @@
   .reviews {
     .container();
     padding-top: 72px;
-    padding-bottom: 100px;
+    padding-bottom: 58px;
   }
 
   .reviews::after {
@@ -99,50 +99,102 @@
 }
 
 .reviews__write {
-  padding: 13px 78px 15px 78px;
-  margin-top: 36px;
+  padding: 14px 78px 14px 78px;
+  margin-top: 39px;
 
   @media @tablet-widths {
 
     position: absolute;
     padding: 14px 39px;
-    bottom: 334px;
+    bottom: 406px;
     left: 492px;
   }
 
   @media @desktop-widths {
 
-    bottom: 265px;
+    bottom: 307px;
     left: 873px;
   }
 }
 
-@media @tablet-widths {
+.reviews__page {
+  display: flex;
+  margin-bottom: 40px;
 
-  .reviews__prev {
-    position: absolute;
-    bottom: 80px;
-    left: 300px;
+  @media @tablet-widths {
+
+    margin-bottom: 28px;
+    justify-content: flex-end;
+    transform: translateY(-102px);
+    border: none;
   }
 
-  .reviews__next {
-    position: absolute;
-    bottom: 80px;
-    left: 488px;
+  @media @desktop-widths {
+
+    transform: translateY(8px);
   }
 }
 
-@media @desktop-widths {
+.reviews__prev {
+  width: 128px;
+  height: 48px;
+  font-size: 0;
+  background: transparent url("../img/icon-left-arrow.svg") no-repeat center;
+  border: 1px solid #ececec;
+  box-sizing: border-box;
+  cursor: pointer;
 
-  .reviews__prev {
-    position: absolute;
-    bottom: 60px;
-    left: 680px;
+  &:hover {
+    opacity: 0.6;
   }
 
-  .reviews__next {
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media @tablet-widths {
+
+    width: 87px;
+    height: 50px;
+    border: none;
+  }
+
+  @media @desktop-widths {
+
     position: absolute;
     bottom: 60px;
-    left: 869px;
+    left: 700px;
+  }
+}
+
+.reviews__next {
+  width: 129px;
+  height: 48px;
+  font-size: 0;
+  background: transparent url("../img/icon-right-arrow.svg") no-repeat center;
+  border: 1px solid #ececec;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media @tablet-widths {
+
+    width: 88px;
+    height: 50px;
+    border: none;
+  }
+
+  @media @desktop-widths {
+
+    position: absolute;
+    bottom: 60px;
+    left: 787px;
   }
 }

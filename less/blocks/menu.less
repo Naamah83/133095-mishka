@@ -24,20 +24,78 @@
 
 .menu__product {
   display: block;
+  position: relative;
   margin: 0;
   padding: 0;
   color: #ffffff;
   background-color: #63d1bb;
-  padding: 25px 125px 30px 29px;
+  padding: 25px 130px 30px 29px;
 
-    &--toy {
-      background-color: #56c3b2;
+  &:hover {
+    transform: translateY(-5px);
+    padding-bottom: 33px;
+    margin-bottom: -5px;
+  }
+
+  &:active {
+    transform: translateY(0);
+    padding-bottom: 28px;
+    margin-bottom: 0px;
+    color: #8be1d0;
+  }
+
+  &--interior {
+    background-color: #63d1bb;
+
+    &::after {
+    content: '';
+    position: absolute;
+    width: 41px;
+    height: 62px;
+    top: 23px;
+    right: 36px;
+    background: url("../img/icon-interior.svg") no-repeat center;
+    opacity: 0.3;
+  }
+
+    &:hover {
+      background-color: #59d5bc;
     }
+  }
+
+  &--toy {
+    background-color: #56c3b2;
+
+    &::after {
+    content: '';
+    position: absolute;
+    width: 61px;
+    height: 61px;
+    top: 18px;
+    right: 27px;
+    background: url("../img/icon-toy.svg") no-repeat center;
+    opacity: 0.3;
+  }
+
+    &:hover {
+      background-color: #46c1ae;
+    }
+  }
 
   @media @tablet-widths {
 
     width: 100%;
     padding: 27px 165px 35px 36px;
+
+     &--interior::after {
+      right: 37px;
+      top: 29px;
+    }
+
+    &--toy::after {
+      top: 29px;
+      right: 33px;
+    }
   }
 
   @media @desktop-widths {
