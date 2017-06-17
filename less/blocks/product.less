@@ -17,9 +17,9 @@
     flex-direction: column;
     flex-basis: 316px;
     margin-right: 50px;
-    margin-bottom: 57px;
+    margin-bottom: 0;
 
-      &:last-child {
+    &:last-child {
       margin-right: 0;
     }
   }
@@ -28,16 +28,20 @@
 .product__photo {
 
   img {
+
+    display: block;
     height: 100%;
     width: 100%;
   }
 
   @media @tablet-widths {
+
     flex-basis: 334px;
     height: 334px;
   }
 
   @media @desktop-widths {
+
     flex-basis: 462px;
   }
 }
@@ -45,20 +49,26 @@
 .product__inner {
   display: flex;
   flex-direction: column;
-  padding: 0px 27px 0 27px;
+  padding-top: 26px;
+  padding-right: 27px;
+  padding-left: 27px;
   border: 1px solid #f1f1f1;
 
   &:hover {
+
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   }
 
   &:active {
+
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
   }
 
   @media @tablet-widths {
+
     flex-grow: 1;
-    margin-top: 0;
+    padding-top: 0;
+    padding-left: 26px;
   }
 }
 
@@ -67,14 +77,15 @@
   line-height: 24px;
   font-weight: 700;
   margin: 0;
-  margin-top: 19px;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 
   & a:hover {
+
     color: rgba(0, 0, 0, 0.6);
   }
 
   & a:active {
+
     color: rgba(0, 0, 0, 0.3);
   }
 
@@ -103,9 +114,10 @@
 
   @media @desktop-widths {
 
-    margin-bottom: 13px;
+    margin-bottom: 15px;
   }
 }
+
 .product__buy {
   display: flex;
   margin-top: auto;
@@ -114,8 +126,8 @@
   line-height: 24px;
   font-weight: 700;
   color: #000000;
-  padding-top: 22px;
-  padding-bottom: 26px;
+  padding-top: 21px;
+  margin-bottom: 27px;
 
   @media @tablet-widths {
 

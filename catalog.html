@@ -2,33 +2,31 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Мишка</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
+    <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header">
-      <div class="page-header__logo">
-        <a href="index.html">
-          <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
-        </a>
-      </div>
+    <header class="page__header">
       <nav class="main-nav main-nav--closed main-nav--nojs">
-        <button class="main-nav__toggler" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--active"><a>Каталог товаров</a></li>
-            <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
-            <li class="main-nav__item-new"><a href="#">Новые поступления</a></li>
-            <li class="main-nav__item-sale"><a href="#">Распродажа</a></li>
-          </ul>
-          <ul class="main-nav__user-list">
-            <li class="main-nav__item-search"><a href="#">Поиск по сайту</a></li>
-            <li class="main-nav__item-basket"><a href="#">Корзина: пока пуста</a></li>
-          </ul>
-          <div class="main-nav__delivery">Бесплатная доставка по России</div>
+        <div class="main-nav__logo">
+          <a href="index.html">
+            <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+          </a>
         </div>
+        <button class="main-nav__toggler" type="button">Открыть меню</button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--catalog"><a>Каталог товаров</a></li>
+          <li class="main-nav__item main-nav__item--order"><a href="form.html">Вязание на заказ</a></li>
+          <li class="main-nav__item main-nav__item--new"><a href="#">Новые поступления</a></li>
+          <li class=" main-nav__item main-nav__item--sale"><a href="#">Распродажа</a></li>
+        </ul>
+        <ul class="main-nav__user-list">
+          <li class="main-nav__item main-nav__item--search"><a href="#">Поиск по сайту</a></li>
+          <li class="main-nav__item main-nav__item--basket"><a href="#">Корзина: пока пуста</a></li>
+          <li class="main-nav__item--delivery">Бесплатная доставка по России</li>
+        </ul>
       </nav>
     </header>
     <h1 class="inner-title">Каталог товаров</h1>
@@ -92,10 +90,8 @@
           <a class="social-link social-link--fb" href="https://www.facebook.com/htmlacademy">Фейсбук</a>
           <a class="social-link social-link--tw" href="https://www.twitter.com/htmlacademy"> Твиттер</a>
         </div>
-        <div class="page-footer__copyright">
-          <p>Разработано
-            <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML</a>
-          </p>
+        <div class="page-footer__copyright">Разработано
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         </div>
       </div>
     </footer>
@@ -105,11 +101,11 @@
         <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
           <div class="modal__form-title">Выберите размер:</div>
           <div class="modal__inner">
-            <input id="s" type="radio" name="size" checked>
+            <input id="s" type="radio" name="size" value="S" checked>
             <label class="modal__size" for="s">S</label>
-            <input id="m" type="radio" name="size" checked>
+            <input id="m" type="radio" name="size" value="M">
             <label class="modal__size" for="m">M</label>
-            <input id="l" type="radio" name="size" checked>
+            <input id="l" type="radio" name="size" value="L">
             <label class="modal__size" for="l">L</label>
           </div>
           <button class="modal__btn btn" type="submit">Добавить</button>
@@ -118,39 +114,40 @@
     </section>
     <div class="modal-overlap"></div>
     <script>
-    var link = document.querySelector(".featured__form");
-    var popup = document.querySelector(".modal");
-    var overlap = document.querySelector(".modal-overlap");
+      var modal = document.querySelector(".modal");
+      var overlap = document.querySelector(".modal-overlap");
+      var link = document.querySelector(".product__basket");
 
-    link.addEventListener("click", function (event) {
-      event.preventDefault();
-      popup.classList.add("modal--show");
-      overlap.classList.add("modal--show");
-    });
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
 
-    window.addEventListener("keydown", function (event) {
-      if (event.keyCode === 27) {
-        if (popup.classList.contains("modal--show")) {
-          popup.classList.remove("modal--show");
-          overlap.classList.remove("modal-overlap--show");
+        overlap.classList.add("modal-overlap--show");
+        modal.classList.add("modal--show");
+      });
+
+      window.addEventListener("keydown", function (event) {
+        if (event.keyCode === 27) {
+          if (modal.classList.contains("modal--show")) {
+            modal.classList.remove("modal--show");
+            overlap.classList.remove("modal-overlap--show");
+          }
         }
-      }
-    });
+      });
 
-    var navMain = document.querySelector('.main-nav');
-    var navToggler = document.querySelector('.main-nav__toggler');
+      var navMain = document.querySelector(".main-nav");
+      var navToggler = document.querySelector(".main-nav__toggler");
 
-    navMain.classList.remove('main-nav--nojs');
+      navMain.classList.remove("main-nav--nojs");
 
-    navToggler.addEventListener('click', function() {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
-      }
-    });
-  </script>
+      navToggler.addEventListener("click", function() {
+        if (navMain.classList.contains("main-nav--closed")) {
+          navMain.classList.remove("main-nav--closed");
+          navMain.classList.add("main-nav--opened");
+        } else {
+          navMain.classList.add("main-nav--closed");
+          navMain.classList.remove("main-nav--opened");
+        }
+      });
+    </script>
   </body>
 </html>

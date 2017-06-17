@@ -8,59 +8,56 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header">
-      <div class="page-header__logo">
-        <a href="index.html">
-          <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
-        </a>
-      </div>
+    <header class="page__header">
       <nav class="main-nav main-nav--closed main-nav--nojs">
-        <button class="main-nav__toggler" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
-            <li class="main-nav__item main-nav__item--active"><a>Вязание на заказ</a></li>
-            <li class="main-nav__item-new"><a href="#">Новые поступления</a></li>
-            <li class="main-nav__item-sale"><a href="#">Распродажа</a></li>
-          </ul>
-          <ul class="main-nav__user-list">
-            <li class="main-nav__item-search"><a href="#">Поиск по сайту</a></li>
-            <li class="main-nav__item-basket"><a href="#">Корзина: пока пуста</a></li>
-          </ul>
-          <div class="main-nav__delivery">Бесплатная доставка по России</div>
+        <div class="main-nav__logo">
+          <a href="index.html">
+            <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+          </a>
         </div>
+        <button class="main-nav__toggler" type="button">Открыть меню</button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--catalog"><a href="catalog.html">Каталог товаров</a></li>
+          <li class="main-nav__item main-nav__item--order"><a>Вязание на заказ</a></li>
+          <li class="main-nav__item main-nav__item--new"><a href="#">Новые поступления</a></li>
+          <li class=" main-nav__item main-nav__item--sale"><a href="#">Распродажа</a></li>
+        </ul>
+        <ul class="main-nav__user-list">
+          <li class="main-nav__item main-nav__item--search"><a href="#">Поиск по сайту</a></li>
+          <li class="main-nav__item main-nav__item--basket"><a href="#">Корзина: пока пуста</a></li>
+          <li class="main-nav__item--delivery">Бесплатная доставка по России</li>
+        </ul>
       </nav>
     </header>
     <h1 class="inner-title">Вязание на заказ</h1>
     <section class="page-order">
       <h2 class="page-order__title visually-hidden">Форма заказа</h2>
       <div class="page-order__descr">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</div>
-
       <form class="form-order" action="https://echo.htmlacademy.ru" method="post">
         <div class="form-order__inner">
           <div class="form-order__title">Тип</div>
           <div class="form-order__radio">
-            <input id="accessories" type="radio" name="type" checked>
-              <label class="form-order__info-radio" for="accessories">Аксессуар для интерьера</label>
-            <input id="toy" type="radio" name="type" checked>
-              <label class="form-order__info-radio" for="toy">Детская игрушка</label>
+            <input id="accessories" type="radio" name="group" value="accessories" checked>
+            <label class="form-order__info-radio" for="accessories">Аксессуар для интерьера</label>
+            <input id="toy" type="radio" name="group" value="toy">
+            <label class="form-order__info-radio" for="toy">Детская игрушка</label>
           </div>
         </div>
         <div class="form-order__wrapper-color">
           <div class="form-order__inner">
             <div class="form-order__title">Цвет</div>
             <div class="form-order__checkbox">
-              <input id="white" type="checkbox" name="color" checked>
+              <input id="white" type="checkbox" name="white" checked>
               <label class="form-order__info-checkbox" for="white">Белый</label>
-              <input id="grey" type="checkbox" name="color" checked>
+              <input id="grey" type="checkbox" name="greyr" checked>
               <label class="form-order__info-checkbox" for="grey">Серый</label>
-              <input id="tiffany" type="checkbox" name="color" checked>
+              <input id="tiffany" type="checkbox" name="tiffany">
               <label class="form-order__info-checkbox" for="tiffany">«Тиффани»</label>
-              <input id="black" type="checkbox" name="color" checked>
+              <input id="black" type="checkbox" name="black">
               <label class="form-order__info-checkbox" for="black">Черный</label>
-              <input id="pink" type="checkbox" name="color" checked>
+              <input id="pink" type="checkbox" name="pink">
               <label class="form-order__info-checkbox" for="pink">Розовый</label>
-              <input id="orangе" type="checkbox" name="color" checked>
+              <input id="orangе" type="checkbox" name="orangе">
               <label class="form-order__info-checkbox" for="orangе">Оранжевый</label>
             </div>
           </div>
@@ -69,19 +66,18 @@
           <div class="form-order__title">ФИО</div>
           <div class="form-order__info">
             <label class="form-order__info-title" for="name">Имя:</label>
-              <input class="form-order__input" type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
+            <input class="form-order__input" type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
             <label class="form-order__info-title" for="surname">Фамилия:</label>
-              <input class="form-order__input" type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
+            <input class="form-order__input" type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
             <label class="form-order__info-title" for="patronymic">Отчество:</label>
-              <input class="form-order__input" type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
+            <input class="form-order__input" type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
           </div>
         </div>
         <div class="form-order__wrapper-link">
           <div class="form-order__inner-link">
             <label class="form-order__title form-order__title--phone" for="phone">Тел</label>
             <input class="form-order__input-link" type="tel" name="tel" id="phone" placeholder="+7 XXX XX XX*" required>
-            <label class="form-order__title form-order__title--email" for="email">E-mail
-            </label>
+            <label class="form-order__title form-order__title--email" for="email">E-mail</label>
             <input class="form-order__input-link" type="email" name="email" id="email" placeholder="Ваш Email*" required>
           </div>
         </div>
@@ -105,28 +101,26 @@
           <a class="social-link social-link--fb" href="https://www.facebook.com/htmlacademy">Фейсбук</a>
           <a class="social-link social-link--tw" href="https://www.twitter.com/htmlacademy"> Твиттер</a>
         </div>
-        <div class="page-footer__copyright">
-          <p>Разработано
-            <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          </p>
+        <div class="page-footer__copyright">Разработано
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         </div>
       </div>
     </footer>
     <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggler = document.querySelector('.main-nav__toggler');
+      var navMain = document.querySelector(".main-nav");
+      var navToggler = document.querySelector(".main-nav__toggler");
 
-    navMain.classList.remove('main-nav--nojs');
+      navMain.classList.remove("main-nav--nojs");
 
-    navToggler.addEventListener('click', function() {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
-      }
-    });
-  </script>
+      navToggler.addEventListener("click", function() {
+        if (navMain.classList.contains("main-nav--closed")) {
+          navMain.classList.remove("main-nav--closed");
+          navMain.classList.add("main-nav--opened");
+        } else {
+          navMain.classList.add("main-nav--closed");
+          navMain.classList.remove("main-nav--opened");
+        }
+      });
+    </script>
   </body>
 </html>

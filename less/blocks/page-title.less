@@ -5,7 +5,10 @@
   font-weight: 700;
   background: #f9f9f9 url("../img/hero-mobile@1x.jpg") no-repeat;
   background-position: center -19px;
-  padding: 70px 15px 192px 15px;
+  padding-top: 70px;
+  padding-bottom: 122px;
+  padding-left: 38px;
+  padding-right: 38px;
   border-top: 1px solid #ededed;
 
   @media @tablet-widths {
@@ -16,19 +19,10 @@
     background: #f9f9f9 url("../img/hero-mobile@1x.jpg") no-repeat;
     background-position: center 0px;
     padding-top: 153px;
-    padding-bottom: 494px;
-
-    &::after {
-      content: "";
-      position: absolute;
-      background: url(../img/zigzag-fill-desktop.png);
-      background-repeat: repeat;
-      width: 100%;
-      height: 24px;
-      bottom: -11px;
-      left: 0;
-      z-index: 1;
-    }
+    padding-bottom: 373px;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-top: -60px;
   }
 
   @media @desktop-widths {
@@ -36,6 +30,6 @@
     font-size: 53px;
     line-height: 57px;
     border-top: none;
-    padding-bottom: 480px;
+    padding-bottom: 360px;
   }
 }

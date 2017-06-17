@@ -6,44 +6,29 @@
   color: #444444;
   margin: 0 auto;
   padding-bottom: 37px;
+  margin-bottom: 31px;
 
   &::after {
     content: "";
     position: absolute;
     background: url(../img/zigzag-line-tablet.png);
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     width: 100%;
     height: 17px;
     bottom: -10px;
   }
-}
 
-@media @tablet-widths {
-
-  .featured {
+  @media @tablet-widths {
 
     padding-bottom: 60px;
-
-    &::after {
-      bottom: -8px;
-    }
+    margin-bottom: 58px;
   }
-}
 
-@media @desktop-widths {
+  @media @desktop-widths {
 
-  .featured {
     .container();
     padding-bottom: 98px;
-
-    &::after {
-      content: "";
-      position: absolute;
-      background: url(../img/zigzag-line-tablet.png);
-      background-repeat: no-repeat;
-      width: 100%;
-      height: 17px;
-    }
+    margin-bottom: 57px;
   }
 }
 
@@ -51,16 +36,15 @@
   .container();
 
   @media @tablet-widths {
+
     position: relative;
-    width: 334px;
-    padding-right: 334px;
+    width: 291px;
+    padding-right: 377px;
   }
 
   @media @desktop-widths {
 
-    padding: 0;
-    width: 351px;
-    padding-right: 525px;
+    padding-right: 585px;
     padding-left: 174px;
   }
 }
@@ -82,8 +66,8 @@
     padding: 0;
     font-size: 43px;
     line-height: 50px;
-    margin-bottom: 15px;
-    margin-left: -3px;
+    margin-bottom: 48px;
+    transform: translateX(-3px);
   }
 
   @media @desktop-widths {
@@ -91,8 +75,10 @@
     font-size: 53px;
     line-height: 57px;
     width: 700px;
-    transform: translateY(55px);
     z-index: 1;
+    padding-top: 55px;
+    margin-bottom: 48px;
+    transform: translateX(-3px);
   }
 }
 
@@ -108,13 +94,13 @@
 
   @media @tablet-widths {
 
-    position: relative;
+    position: absolute;
     width: 85px;
     line-height: 17px;
     margin: 0;
     padding: 0;
-    left: 562px;
-    top: -53px;
+    top: 11px;
+    right: 20px;
     text-align: center;
   }
 
@@ -123,8 +109,8 @@
     width: 85px;
     margin: 0;
     padding: 0;
-    top: -2px;
-    left: -135px;
+    top: 70px;
+    left: 40px;
   }
 }
 
@@ -136,20 +122,17 @@
 
     font-size: 17px;
     line-height: 30px;
-    padding-right: 51px;
     margin-bottom: 37px;
   }
 
   @media @desktop-widths {
 
     margin-bottom: 47px;
-    margin-top: 55px;
-    padding-right: 70px;
   }
 }
 
 .featured__table {
-  lfont-size: 15px;
+  font-size: 15px;
   line-height: 20px;
   width: 100%;
   border-collapse: collapse;
@@ -157,25 +140,33 @@
 
   td {
     border-bottom: 1px solid #ececec;
-    padding: 8px 28px 10px 0;
+    padding-top: 8px;
+    padding-bottom: 11px;
+    padding-left: 0;
+    padding-right: 28px;
   }
 
   @media @tablet-widths {
 
-    width: 290px;
+    width: 291px;
     margin-bottom: 56px;
 
     td {
-      padding: 9px 0 10px 0;
+
+      padding-top: 9px;
+      padding-bottom: 10px;
+      padding-left: 1px;
+      padding-right: 0px;
     }
   }
 
   @media @desktop-widths {
 
-    margin-bottom: 108px;
+    margin-bottom: 111px;
 
     td {
-      padding: 9px 0 11px 0;
+
+      padding-left: 0;
     }
   }
 }
@@ -185,37 +176,24 @@
   line-height: 24px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 28px;
+  margin-bottom: 27px;
 
   @media @tablet-widths {
 
     font-size: 20px;
     line-height: 24px;
-    padding-right: 50px;
     margin-bottom: 33px;
   }
 
   @media @desktop-widths {
 
     margin-bottom: 34px;
-    padding-right: 56px;
   }
 }
 
 .featured__form {
-  padding: 14px 0 14px 0;
-
-  @media @tablet-widths {
-
-    margin-right: 44px;
-    margin-left: -2px;
-  }
-
-  @media @desktop-widths {
-
-    margin-right: 58px;
-    margin-left: 1px;
-  }
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
 .featured__photo {
@@ -224,8 +202,8 @@
   @media @tablet-widths {
 
     position: absolute;
-    left: 334px;
-    top: 107px;
+    right: 0;
+    top: 106px;
     width: 334px;
     margin: 0;
 
@@ -238,7 +216,6 @@
   @media @desktop-widths {
 
     width: 525px;
-    left: 525px;
     top: 0;
   }
 }
