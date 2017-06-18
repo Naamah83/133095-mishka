@@ -3,6 +3,7 @@
   padding: 0;
   list-style: none;
   text-align: left;
+  margin-bottom: 36px;
 
   @media @tablet-widths {
 
@@ -18,21 +19,31 @@
 .slider__item {
   margin: 0;
   padding: 0;
+}
+
+.slider__text {
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+  margin-bottom: 24px;
 
   @media @tablet-widths {
 
-    & p {
-      margin-bottom: 55px;
-    }
+    font-size: 17px;
+    line-height: 30px;
+    padding-right: 25px;
+    margin-bottom: 55px;
   }
 
   @media @desktop-widths {
 
-    & p {
-      padding-right: 105px;
-      margin-bottom: 35px;
-    }
+    margin-bottom: 36px;
   }
+}
+
+.slider__nickname {
+  font-size: 17px;
+  line-height: 25px;
 }
 
 .slider__author-review {
@@ -44,6 +55,7 @@
 
   @media @tablet-widths {
 
-    font-size: 18px;
+    font-size: 17px;
+    margin-bottom: 2px;
   }
 }

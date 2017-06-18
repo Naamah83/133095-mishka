@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    margin-bottom: 63px;
   }
 
   @media @desktop-widths {
@@ -15,28 +16,46 @@
     flex-direction: row;
     flex-wrap: nowrap;
     border: 1px solid #f1f1f1;
+    margin-bottom: 101px;
   }
 }
 
 .video-bg__content {
   display: flex;
   flex-direction: column;
-  padding: 25px 33px 32px 33px;
+  padding-top: 24px;
+  padding-bottom: 32px;
+  padding-left: 33px;
+  padding-right: 33px;
   border: 1px solid #f1f1f1;
+
+  &:hover {
+
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
 
   @media @tablet-widths {
 
-    padding: 40px 42px 45px 42px;
-
+    padding-top: 34px;
+    padding-bottom: 41px;
+    padding-left: 41px;
+    padding-right: 41px;
   }
 
   @media @desktop-widths {
 
     border: none;
     flex-grow: 1;
-    flex-basis: 230px;
-    padding: 38px 58px 60px 80px;
-
+    width: 230px;
+    padding-top: 39px;
+    padding-bottom: 60px;
+    padding-left: 76px;
+    padding-right: 58px;
   }
 }
 
@@ -46,18 +65,23 @@
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
-  padding-bottom: 202px;
-  padding-left: 55px;
+  padding-bottom: 201px;
+  padding-left: 56px;
 
   @media @tablet-widths {
 
     font-size: 20px;
-    padding-bottom: 31px;
+    padding-bottom: 0;
+    margin-bottom: 32px;
+    padding-left: 64px;
   }
 
   @media @desktop-widths {
 
-    padding: 59px 91px 35px 0;
+    padding-top: 57px;
+    padding-left: 0;
+    padding-right: 39px;
+    margin-bottom: 33px;
   }
 }
 
@@ -66,30 +90,27 @@
   line-height: 24px;
   font-weight: 400;
   color: #444444;
-  margin-bottom: 47px;
+  margin-bottom: 25px;
 
 
   @media @tablet-widths {
 
     font-size: 15px;
     line-height: 30px;
-    padding-right: 17px;
-    margin-bottom: 34px;
+    margin-bottom: 35px;
+    margin-left: -2px;
   }
 
   @media @desktop-widths {
 
-    padding-right: 15px;
+    margin-left: 0;
+    margin-bottom: 46px;
   }
 }
 
 .video-bg__order {
-  padding: 15px 0 13px 0;
-
-  @media @desktop-widths {
-
-    margin-top: auto;
-  }
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
 .video-bg__video {
@@ -107,7 +128,7 @@
 
   @media @desktop-widths {
 
-    flex-basis: 682px;
+    width: 682px;
     height: 455px;
   }
 }

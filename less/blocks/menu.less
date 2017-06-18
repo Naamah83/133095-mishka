@@ -1,9 +1,35 @@
 .menu {
+  position: relative;
   font-size: 19px;
   line-height: 24px;
   font-weight: 700;
-  margin-top: -70px;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
+  background-color: #f9f9f9;
+
+  @media @tablet-widths {
+
+    margin-bottom: 35px;
+
+    &::after {
+
+      content: "";
+      position: absolute;
+      background: url(../img/zigzag-fill-desktop.png);
+      background-repeat: repeat-x;
+      width: 100%;
+      height: 24px;
+      bottom: -2px;
+      z-index: 1;
+    }
+  }
+
+  @media @desktop-widths {
+
+    margin-bottom: 58px;
+  }
+}
+
+.menu-inner {
 
   @media @tablet-widths {
 
@@ -12,32 +38,104 @@
     display: flex;
     font-size: 20px;
     line-height: 30px;
-    margin-top: -120px;
-    margin-bottom: 35px;
-  }
-
-  @media @desktop-widths {
-
-    margin-bottom: 60px;
   }
 }
 
 .menu__product {
   display: block;
+  position: relative;
   margin: 0;
   padding: 0;
   color: #ffffff;
   background-color: #63d1bb;
-  padding: 30px 0 30px 30px;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  padding-left: 28px;
+  padding-right: 130px;
 
-    &--toy {
-      background-color: #56c3b2;
+  &:active {
+
+    color: #8be1d0;
+  }
+
+  &--interior {
+
+    background-color: #63d1bb;
+
+    &::after {
+
+      content: "";
+      position: absolute;
+      width: 41px;
+      height: 62px;
+      top: 23px;
+      right: 36px;
+      background: url("../img/icon-interior.svg") no-repeat center;
+      opacity: 0.3;
     }
+
+    &:hover {
+
+      background-color: #59d5bc;
+    }
+  }
+
+  &--toy {
+
+    background-color: #56c3b2;
+
+    &::after {
+
+      content: "";
+      position: absolute;
+      width: 61px;
+      height: 61px;
+      top: 18px;
+      right: 27px;
+      background: url("../img/icon-toy.svg") no-repeat center;
+      opacity: 0.3;
+    }
+
+    &:hover {
+
+      background-color: #46c1ae;
+    }
+  }
 
   @media @tablet-widths {
 
     width: 100%;
-    padding: 35px 165px 35px 35px;
+    padding-top: 28px;
+    padding-bottom: 42px;
+    padding-left: 35px;
+    padding-right: 165px;
+
+    &:hover {
+
+      transform: translateY(-5px);
+      padding-bottom: 33px;
+      margin-bottom: -5px;
+    }
+
+    &:active {
+
+      transform: translateY(0);
+      padding-bottom: 28px;
+      margin-bottom: 0px;
+      color: #8be1d0;
+    }
+
+    &--interior::after {
+
+      right: 37px;
+      top: 29px;
+    }
+
+    &--toy::after {
+
+      top: 29px;
+      right: 33px;
+    }
   }
 
   @media @desktop-widths {

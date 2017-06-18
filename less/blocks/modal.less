@@ -1,0 +1,149 @@
+@keyframes bounce {
+
+  0% { transform: translateY(-2000px); }
+  70% { transform: translateY(30px); }
+  90% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.modal {
+  width: 320px;
+  margin: 0 auto;
+  display: none;
+  position: absolute;
+  top: 964px;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #c6c6c6;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+
+  &--show {
+
+    display: block;
+    animation: bounce 0.6s;
+  }
+
+  @media @tablet-widths {
+
+    width: 564px;
+    top: 1531px;
+  }
+
+  @media @desktop-widths {
+
+    top: 1113px;
+  }
+}
+
+.modal__wrapper {
+  .container();
+  padding-top: 30px;
+
+  @media @tablet-widths {
+
+    width: 355px;
+    padding-top: 35px;
+  }
+}
+
+.modal__title {
+  margin: 0;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  @media @tablet-widths {
+
+    font-size: 30px;
+    line-height: 57px;
+    font-weight: 700;
+    padding: 0;
+    margin-bottom: 13px;
+  }
+}
+
+.modal__form {
+  margin-bottom: 46px;
+}
+
+.modal__form-title {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+  margin-bottom: 23px;
+
+  @media @tablet-widths {
+
+    font-size: 17px;
+    margin-bottom: 21px;
+  }
+}
+
+.modal__inner {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  @media @tablet-widths {
+
+    margin-bottom: 31px;
+  }
+}
+
+.modal__size {
+  display: block;
+  width: 80px;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border: 2px solid rgba(68, 68, 68, 0.1);
+  box-sizing: border-box;
+
+  &:hover {
+
+    border-color: rgba(68, 68, 68, 0.3);
+  }
+
+  @media @tablet-widths {
+
+    width: 110px;
+  }
+}
+
+input[type="radio"]:checked + .modal__size {
+  border-color: #63d1bb;
+}
+
+.modal__btn {
+  width: 100%;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 400;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  color: #ffffff;
+  background-color: #63d1bb;
+  text-transform: uppercase;
+  border: none;
+
+  &:hover {
+
+    background-color: #59d5bc;
+  }
+
+  &:active {
+
+    color: rgba(255, 255, 255, 0.3);
+  }
+}

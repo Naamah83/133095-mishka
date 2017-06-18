@@ -10,7 +10,7 @@
 
     display: flex;
     justify-content: space-between;
-    align-content: baseline;
+    align-items: baseline;
   }
 }
 
@@ -22,6 +22,7 @@
     display: block;
 
     img {
+
       padding-top: 50px;
     }
   }
@@ -35,9 +36,19 @@
   line-height: 18px;
   font-weight: 700;
 
+  &:hover {
+
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+
+    color: rgba(0, 0, 0, 0.3);
+  }
+
   @media @tablet-widths {
 
-    padding-top: 60px;
+    padding-top: 63px;
     padding-bottom: 45px;
   }
 }
