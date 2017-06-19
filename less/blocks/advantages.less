@@ -9,12 +9,12 @@
 
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 75px;
+    margin-bottom: 28px;
   }
 
   @media @desktop-widths {
 
-    margin-bottom: 84px;
+    margin-bottom: 35px;
   }
 }
 
@@ -33,7 +33,7 @@
     line-height: 50px;
     flex-grow: 1;
     padding: 0;
-    margin: 0;
+    margin-bottom: 47px;
     transform: translateX(-5px);
   }
 
@@ -42,7 +42,7 @@
     font-size: 53px;
     line-height: 57px;
     padding-left: 175px;
-    margin-bottom: 2px;
+    margin-bottom: 48px;
   }
 }
 
@@ -68,39 +68,106 @@
 }
 
 .advantages__list-item {
+  position: relative;
   text-align: left;
   padding-right: 11px;
   padding-top: 56px;
   margin-bottom: 27px;
 
+  &::before {
+
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &--flower::before {
+
+    width: 33px;
+    height: 38px;
+    left: 7px;
+    background: url("../img/icon-feature-1.svg") no-repeat center;
+  }
+
+  &--banknote::before {
+
+    width: 47px;
+    height: 27px;
+    top: 3px;
+    background: url("../img/icon-feature-3.svg") no-repeat center;
+  }
+
+  &--heart::before {
+
+    width: 34px;
+    height: 27px;
+    left: 7px;
+    top: 8px;
+    background: url("../img/icon-feature-5.svg") no-repeat center;
+  }
+
+  &--ball::before {
+
+    width: 35px;
+    height: 34px;
+    top: 5px;
+    left: 3px;
+    background: url("../img/icon-feature-2.svg") no-repeat center;
+  }
+
+  &--rocket::before {
+
+    width: 55px;
+    height: 23px;
+    top: 6px;
+    left: -6px;
+    background: url("../img/icon-feature-4.svg") no-repeat center;
+  }
+
+  &--gift::before {
+
+    width: 33px;
+    height: 32px;
+    top: 4px;
+    left: 3px;
+    background: url("../img/icon-feature-6.svg") no-repeat center;
+  }
+
   @media @tablet-widths {
 
     width: 294px;
-    padding-top: 103px;
+    padding-top: 57px;
     padding-right: 40px;
-    margin-bottom: 8px;
+    margin-bottom: 54px;
 
     &:nth-child(1) {
+
       order: 1;
     }
 
     &:nth-child(2) {
+
       order: 3;
     }
 
     &:nth-child(3) {
+
       order: 5;
     }
 
     &:nth-child(4) {
+
       order: 2;
     }
 
     &:nth-child(5) {
+
       order: 4;
     }
 
     &:nth-child(6) {
+
       order: 6;
     }
   }
@@ -108,8 +175,8 @@
   @media @desktop-widths {
 
     width: 293px;
-    padding-top: 102px;
+    padding-top: 55px;
     padding-right: 58px;
-    margin-bottom: 8px;
+    margin-bottom: 56px;
   }
 }

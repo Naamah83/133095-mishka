@@ -16,7 +16,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     border: 1px solid #f1f1f1;
-    margin-bottom: 101px;
+    margin-bottom: 103px;
   }
 }
 
@@ -41,8 +41,8 @@
 
   @media @tablet-widths {
 
-    padding-top: 34px;
-    padding-bottom: 41px;
+    padding-top: 37px;
+    padding-bottom: 45px;
     padding-left: 41px;
     padding-right: 41px;
   }
@@ -52,14 +52,15 @@
     border: none;
     flex-grow: 1;
     width: 230px;
-    padding-top: 39px;
+    padding-top: 38px;
     padding-bottom: 60px;
-    padding-left: 76px;
+    padding-left: 78px;
     padding-right: 58px;
   }
 }
 
 .video-bg__title {
+  position: relative;
   margin: 0;
   padding: 0;
   font-size: 17px;
@@ -68,12 +69,28 @@
   padding-bottom: 201px;
   padding-left: 56px;
 
+  &::before {
+
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: -2px;
+    width: 36px;
+    height: 26px;
+    background: url("../img/icon-video.svg") no-repeat center;
+  }
+
   @media @tablet-widths {
 
     font-size: 20px;
     padding-bottom: 0;
     margin-bottom: 32px;
     padding-left: 64px;
+
+    &::before {
+
+      top: -2px;
+    }
   }
 
   @media @desktop-widths {
@@ -82,6 +99,12 @@
     padding-left: 0;
     padding-right: 39px;
     margin-bottom: 33px;
+
+    &::before {
+
+     top: 6px;
+     left: 0;
+    }
   }
 }
 
@@ -117,18 +140,56 @@
   position: absolute;
   top: 97px;
 
+  &::after {
+
+    content: "";
+    position: absolute;
+    background: url("../img/icon-play.svg") no-repeat center;
+    background-size: 100%;
+    width: 102px;
+    height: 78px;
+    top: 23%;
+    left: 30%;
+
+    &:hover {
+
+      background-size: 120%;
+    }
+
+    &:active {
+
+      background-size: 80%;
+      opacity: 0.3;
+    }
+  }
+
+  img {
+
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
   @media @tablet-widths {
 
-    display: flex;
-    position: static;
-    height: 455px;
-    width: 100%;
-    border: 1px solid green;
+    position: relative;
+    top: 0;
+
+    &::after {
+
+      top: 41%;
+      left: 42%;
+    }
   }
 
   @media @desktop-widths {
 
     width: 682px;
     height: 455px;
+
+    &::after {
+
+      left: 43%;
+    }
   }
 }
