@@ -1,5 +1,7 @@
 .main-nav {
   position: relative;
+  background: #ffffff;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,6 +10,7 @@
   @media @tablet-widths {
 
     .container();
+    background-color: transparent;
     margin-top: 0;
     display: flex;
     flex-direction: row;
@@ -21,24 +24,6 @@
     padding-left: 50px;
     padding-right: 50px;
   }
-}
-
-.main-nav--closed .main-nav__item {
-  display: none;
-
-  &--logo {
-
-    display: block;
-  }
-
-  @media @tablet-widths {
-
-    display: block;
-  }
-}
-
-.main-nav--opened .main-nav__item {
-  display: block;
 }
 
 .main-nav__toggler {
@@ -101,8 +86,66 @@
   }
 }
 
+@media (max-width: 767px) {
+
+  .main-nav--closed .main-nav__item {
+
+    display: none;
+
+    &--logo {
+
+      display: block;
+    }
+
+    @media @tablet-widths {
+
+      display: block;
+    }
+  }
+
+  .main-nav--opened {
+
+    position: absolute;
+  }
+
+  .main-nav--opened .main-nav__item {
+
+    display: block;
+
+    &--delivery {
+
+      display: none;
+      border-bottom: none;
+    }
+
+    @media @tablet-widths {
+
+      &--delivery {
+
+        display: block;
+        border-bottom: none;
+      }
+    }
+  }
+
+  .main-nav--nojs .main-nav__toggler{
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__item {
+
+    display: block;
+
+    &--delivery {
+
+      display: none;
+      border-bottom: none;
+    }
+  }
+}
+
 .main-nav__list {
-  width: 320px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -128,7 +171,7 @@
 }
 
 .main-nav__user-list {
-  width: 320px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -157,25 +200,26 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
+  border-bottom: 1px solid #ececec;
 
   a {
 
+    position: relative;
     display: block;
     color: #000000;
     text-decoration: none;
-    border-bottom: 1px solid #ececec;
     padding-top: 27px;
     padding-bottom: 27px;
     padding-left: 75px;
 
     &:hover {
 
-      color: rgba(0, 0, 0, 0.6);;
+      color: rgba(0, 0, 0, 0.6);
     }
 
-    &:active{
+    &:active {
 
-      color: rgba(0, 0, 0, 0.3);;
+      color: rgba(0, 0, 0, 0.3);
     }
   }
 
@@ -184,7 +228,57 @@
     border-top: 1px solid #ececec;
   }
 
+  &--search a::before {
+
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 19px;
+    background: data-uri("../img/icon-search.svg") no-repeat center;
+    opacity: 0.2;
+    top: 29px;
+    left: 33px;
+  }
+
+  &--search a:hover::before {
+
+    background: data-uri("../img/icon-search-hover.svg") no-repeat center;
+    opacity: 1;
+  }
+
+  &--search a:active::before {
+
+    background: data-uri("../img/icon-search-hover.svg") no-repeat center;
+    opacity: 0.3;
+  }
+
+  &--basket a::before {
+
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 19px;
+    background: data-uri("../img/icon-cart.svg") no-repeat center;
+    opacity: 0.2;
+    top: 29px;
+    left: 33px;
+  }
+
+  &--basket a:hover::before {
+
+    background: data-uri("../img/icon-cart-hover.svg") no-repeat center;
+    opacity: 1;
+  }
+
+  &--basket a:active::before {
+
+    background: data-uri("../img/icon-cart-hover.svg") no-repeat center;
+    opacity: 0.3;
+  }
+
   &--new {
+
+    border-bottom: none;
 
     a {
 
@@ -194,18 +288,19 @@
 
   &--sale {
 
+    border-bottom: none;
+
     a {
 
+      border-bottom: none;
       display: none;
     }
   }
 
-  &--delivery {
-
-    display: none;
-  }
-
   @media @tablet-widths {
+
+    border-bottom: none;
+    width: 167px;
 
     &--catalog {
 
@@ -249,6 +344,11 @@
         padding-bottom: 32px;
         border-bottom: none;
       }
+
+      a::before {
+
+        top: 35px;
+      }
     }
 
     &--basket {
@@ -262,6 +362,11 @@
         padding-top: 32px;
         padding-bottom: 32px;
         border-bottom: none;
+      }
+
+      a::before {
+
+        top: 35px;
       }
     }
 
@@ -350,16 +455,30 @@
     padding-bottom: 13px;
     padding-top: 22px;
 
+    &:hover {
+
+      opacity: 0.6;
+    }
+
+    &:active {
+
+      opacity: 0.3;
+    }
+
     @media @tablet-widths {
 
+      width: 115px;
+      margin-left: -3px;
       padding-top: 21px;
       padding-bottom: 21px;
     }
 
     @media @desktop-widths {
 
-      padding-top: 28px;
-      padding-left: 45px;
+      width: 150px;
+      padding-top: 8px;
+      padding-left: 10px;
+      margin-left: 0;
     }
   }
 

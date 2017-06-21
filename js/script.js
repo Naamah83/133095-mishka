@@ -1,8 +1,16 @@
 var modal = document.querySelector(".modal");
 var overlap = document.querySelector(".modal-overlap");
 var link = document.querySelector(".featured__form");
+var links = document.querySelector(".product__basket");
 
 link.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  overlap.classList.add("modal-overlap--show");
+  modal.classList.add("modal--show");
+});
+
+links.addEventListener("click", function (event) {
   event.preventDefault();
 
   overlap.classList.add("modal-overlap--show");
