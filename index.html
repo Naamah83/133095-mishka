@@ -6,9 +6,14 @@
     <meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
+    <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+  </script>
+  <script src="picturefill.js" async></script>
   </head>
   <body>
-    <header class="page__header">
+    <header class="page-header">
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__logo">
           <picture>
@@ -22,12 +27,12 @@
           <li class="main-nav__item main-nav__item--catalog"><a href="catalog.html">Каталог товаров</a></li>
           <li class="main-nav__item main-nav__item--order"><a href="form.html">Вязание на заказ</a></li>
           <li class="main-nav__item main-nav__item--new"><a href="#">Новые поступления</a></li>
-          <li class=" main-nav__item main-nav__item--sale"><a href="#">Распродажа</a></li>
+          <li class="main-nav__item main-nav__item--sale"><a href="#">Распродажа</a></li>
         </ul>
         <ul class="main-nav__user-list">
           <li class="main-nav__item main-nav__item--search"><a href="#">Поиск по сайту</a></li>
           <li class="main-nav__item main-nav__item--basket"><a href="#">Корзина: пока пуста</a></li>
-          <li class="main-nav__item--delivery">Бесплатная доставка по России</li>
+          <li class="main-nav__item main-nav__item--delivery"><span>Бесплатная доставка по России</span></li>
         </ul>
       </nav>
     </header>
@@ -59,8 +64,8 @@
         </table>
         <div class="featured__photo">
           <picture>
-            <source media="(min-width: 1150px)" srcset="./img/triple-set-desktop@1x.jpg 1x, ./img/triple-set-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="./img/triple-set-tablet@1x.jpg 1x, ./img/triple-set-tablet@2x.jpg 2x">
+            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
             <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Три вязаные корзинки разных размеров">
           </picture>
         </div>
@@ -151,10 +156,9 @@
           <a class="page-footer__social-link page-footer__social-link--fb" href="#">Фейсбук</a>
           <a class="page-footer__social-link page-footer__social-link--tw" href="#"> Твиттер</a>
         </div>
-        <div class="page-footer__copyright">Разработано
-          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img src="img/htmlacademy.svg" width="27" height="34" alt="HTMLacademy">
-          </a>
+        <div class="page-footer__copyright">
+          <p class="page-footer__copyright-text">Разработано</p>
+          <a class="page-footer__copyright-link page-footer__copyright-link--logo" href="https://htmlacademy.ru/intensive/adaptive"></a>
         </div>
       </div>
     </footer>

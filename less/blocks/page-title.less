@@ -10,10 +10,10 @@
   padding-right: 38px;
   border-top: 1px solid #ededed;
 
-  @media @retina {
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
 
     background: #f9f9f9 url("../img/hero-mobile@2x.jpg") no-repeat center -19px;
-    background-size: 1148px auto;
+    background-size: 575px 373px;
   }
 
   @media @tablet-widths {
@@ -29,7 +29,7 @@
     padding-right: 80px;
     margin-top: -60px;
 
-    @media @retina {
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
 
       background: #f9f9f9 url("../img/hero-desktop@2x.jpg") no-repeat center 0;
       background-size: 1150px 746px;
@@ -54,10 +54,11 @@
       margin: 0 auto;
       height: 1px;
       top: 0;
-      left: 50px;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
-    @media @retina {
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
 
       background: #f9f9f9 url("../img/hero-desktop@2x.jpg") no-repeat center 0;
       background-size: 1250px 746px;

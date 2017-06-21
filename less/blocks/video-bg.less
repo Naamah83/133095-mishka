@@ -144,23 +144,13 @@
 
     content: "";
     position: absolute;
-    background: url("../img/icon-play.svg") no-repeat center;
-    background-size: 100%;
+    display: block;
+    background: data-uri("../img/icon-play.svg") no-repeat;
     width: 102px;
     height: 78px;
-    top: 23%;
-    left: 30%;
-
-    &:hover {
-
-      background-size: 120%;
-    }
-
-    &:active {
-
-      background-size: 80%;
-      opacity: 0.3;
-    }
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   img {
@@ -174,22 +164,26 @@
 
     position: relative;
     top: 0;
-
-    &::after {
-
-      top: 41%;
-      left: 42%;
-    }
   }
 
   @media @desktop-widths {
 
     width: 682px;
     height: 455px;
-
-    &::after {
-
-      left: 43%;
-    }
   }
+}
+
+.video-bg__video:hover::after {
+
+  background-size: cover;
+  width: 121px;
+  height: 92px;
+}
+
+.video-bg__video:active::after {
+
+  width: 80px;
+  height: 61px;
+  background-size: cover;
+  opacity: 0.8;
 }
