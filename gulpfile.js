@@ -82,10 +82,10 @@ gulp.task("copy", function() {
     "img/**",
     "js/**",
     "*.html"
-  ], {
-     base: "."
-   })
-    .pipe(gulp.dest("build"));
+   ], {
+    base: "."
+  })
+  .pipe(gulp.dest("build"));
 });
 
 gulp.task("build", function(fn) {
